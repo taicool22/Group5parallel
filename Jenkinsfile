@@ -3,18 +3,18 @@ pipeline{
     stages{
         stage('1-repoClone'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/taicool22/taicool-pipeline-demo.git']]])
+                sh 'pwd'
             }
         }
         stage('2-parallel job'){
             parallel{
                 stage('1-identification'){
-                    step{
+                    steps{
                         sh 'whoami'
                     }
                 }
                 stage('2-file creation'){
-                    step{
+                    steps{
                         sh 'cat "my name is taiwo" > taiwo.txt '
                     }
                 }

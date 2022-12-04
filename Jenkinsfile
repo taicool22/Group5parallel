@@ -12,6 +12,7 @@ pipeline{
                     steps{
                         sh 'whoami'
                     }
+                }
             }
         }
         stage('2-cpuAnalysis'){
@@ -29,7 +30,7 @@ pipeline{
                 sh 'cat /etc/os-release'
             }
         }   
+    
     }
-    
-    
 }
+    

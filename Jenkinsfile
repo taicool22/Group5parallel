@@ -41,6 +41,9 @@ pipeline{
             }
         } 
         stage('4-os-stats'){
+            when{
+                branch 'feature'
+            }
             steps{
                 sh 'cat /etc/os-release'
             }

@@ -15,7 +15,7 @@ pipeline{
                 }
                 stage('2-subjob'){
                     steps{
-                        sh 'cat "my name is taiwo" > taiwo.tx'
+                        sh 'cat "my name is taiwo"'
                     }
                 }
             }

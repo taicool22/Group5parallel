@@ -14,6 +14,9 @@ pipeline{
                     }
                 }
                 stage('2-subjob'){
+                    when{
+                        branch 'feature'
+                    }
                     steps{
                         sh 'echo "my name is taiwo"'
                     }
@@ -24,6 +27,9 @@ pipeline{
                     }
                 }
                 stage('4-subjob4'){
+                    when{
+                        branch 'feature'
+                    }
                     steps{
                         sh 'echo "my name?" > taiwo.txt'
                     }

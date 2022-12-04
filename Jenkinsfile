@@ -18,6 +18,16 @@ pipeline{
                         sh 'echo "my name is taiwo"'
                     }
                 }
+                stage('3-subjob3'){
+                    steps{
+                        sh 'touch taiwo.txt'
+                    }
+                }
+                stage('4-subjob4'){
+                    steps{
+                        sh 'echo "my name?" > taiwo.txt'
+                    }
+                }
             }
         }
         stage('2-cpuAnalysis'){

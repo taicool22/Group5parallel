@@ -12,12 +12,6 @@ pipeline{
                     steps{
                         sh 'whoami'
                     }
-                }
-                stage('2-file creation'){
-                    steps{
-                        sh 'cat "my name is taiwo" > taiwo.txt '
-                    }
-                }
             }
         }
         stage('2-cpuAnalysis'){

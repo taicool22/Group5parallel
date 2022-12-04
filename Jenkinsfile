@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('1-repoClone'){
             steps{
-                sh '$(pwd)'
+                sh 'pwd'
             }
         }
         stage('2-parallel job'){

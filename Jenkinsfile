@@ -13,6 +13,11 @@ pipeline{
                         sh 'whoami'
                     }
                 }
+                stage('2-subjob'){
+                    steps{
+                        sh 'cat "my name is taiwo" > taiwo.tx'
+                    }
+                }
             }
         }
         stage('2-cpuAnalysis'){
